@@ -114,6 +114,21 @@ export const NAVIGATION_LABELS: Record<RouteKey, NavigationLabelMap> = {
   },
 }
 
+export const BRAND_LABELS: Record<Locale, { name: string; text: string }> = {
+  uk: {
+    name: 'Ренесанс',
+    text: 'Центр лікування залежностей та реабілітації',
+  },
+  ru: {
+    name: 'Ренессанс',
+    text: 'Центр лечения зависимостей и реабилитации',
+  },
+  en: {
+    name: 'Renaissance',
+    text: 'Addiction Treatment and Rehabilitation Center',
+  },
+}
+
 export function buildNavigationItem(key: RouteKey): NavigationItem {
   return {
     key,
