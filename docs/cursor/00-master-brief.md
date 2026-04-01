@@ -120,3 +120,13 @@ Build execution layer from locked decisions:
 
 \- page implementation
 
+
+
+\## Sprint 2 review conditions
+
+\- `GAMBLING\_SERVICE\_CONTENT` is a temporary stub only and must not be treated as final approved content
+
+\- layout / locale semantics must be reviewed at Sprint 2 start
+
+\- token layer is foundation-only and must not be treated as full UI completion
+
