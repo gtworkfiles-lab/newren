@@ -1,8 +1,15 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
-  /* config options here */
   reactCompiler: true,
-};
+  redirects: async () => [
+    {
+      source: '/ua/:path*',
+      destination: '/uk/:path*',
+      permanent: true,
+    },
+  ],
+}
 
-export default nextConfig;
+export default nextConfig
+

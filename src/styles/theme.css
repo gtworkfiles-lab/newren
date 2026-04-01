@@ -1,0 +1,39 @@
+:root {
+  /* Brand Colors - Primary */
+  --color-primary: #2E8B3C;
+  --color-primary-dark: #1F5E2A;
+
+  /* Brand Colors - Secondary */
+  --color-secondary: #3F6EA8;
+  --color-secondary-dark: #2F496B;
+
+  /* Background & Surface */
+  --color-bg-warm: #F8F7F3;
+  --color-surface: #F2F6F4;
+
+  /* Text */
+  --color-text: #24312B;
+  --color-text-secondary: #5F6E67;
+
+  /* UI */
+  --color-border: #D8E2DC;
+  --color-accent-hope: #D7A85B;
+  --color-accent-warning: #B5544F;
+
+  /* Typography */
+  --font-heading: 'Manrope', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  /* Radius */
+  --radius: 10px;
+  --radius-sm: 6px;
+  --radius-lg: 14px;
+}
