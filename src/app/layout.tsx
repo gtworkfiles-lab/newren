@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
+import { headers } from "next/headers"
 import { Manrope, Inter } from "next/font/google"
+import { DEFAULT_LOCALE, isValidLocale } from "@/lib/routes"
 import "./globals.css"
 
 const manrope = Manrope({
@@ -19,14 +21,19 @@ export const metadata: Metadata = {
   description: "Центр лікування залежностей та реабілітації Ренесанс",
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const requestHeaders = await headers()
+  const requestLocale = requestHeaders.get("x-path-locale")
+  const htmlLang =
+    requestLocale && isValidLocale(requestLocale) ? requestLocale : DEFAULT_LOCALE
+
   return (
     <html
-      lang="uk"
+      lang={htmlLang}
       className={`${manrope.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

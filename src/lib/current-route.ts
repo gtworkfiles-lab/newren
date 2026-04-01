@@ -6,8 +6,13 @@ export function resolveCurrentRouteKey(
   pathname: string
 ): RouteKey {
   const segments = pathname.split('/').filter(Boolean)
+  const localizedSegments = segments.slice(1)
 
-  const slug = segments.slice(1).join('/')
+  if (localizedSegments.length === 0) {
+    return 'home'
+  }
+
+  const [slug] = localizedSegments
 
   const routeKey = findRouteKeyBySlug(locale, slug)
 

@@ -41,7 +41,7 @@ export default async function LocaleLayout({
       data-locale={currentLocale}
       data-default-locale={DEFAULT_LOCALE}
     >
-      <Header locale={currentLocale} routeKey="home" />
+      <Header locale={currentLocale} />
       <main className="site-main">{children}</main>
       <Footer locale={currentLocale} />
     </div>

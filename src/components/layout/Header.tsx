@@ -4,15 +4,14 @@ import MainNav from '@/components/layout/MainNav'
 import LocaleSwitcher from '@/components/layout/LocaleSwitcher'
 import { CONTACTS_BY_LOCALE } from '@/data/contacts'
 import { BRAND_LABELS } from '@/data/navigation'
-import type { Locale, RouteKey } from '@/lib/routes'
+import type { Locale } from '@/lib/routes'
 import { getLocalizedPath } from '@/lib/slug-map'
 
 type HeaderProps = {
   locale: Locale
-  routeKey: RouteKey
 }
 
-export default function Header({ locale, routeKey }: HeaderProps) {
+export default function Header({ locale }: HeaderProps) {
   const contacts = CONTACTS_BY_LOCALE[locale]
   const primaryPhone = contacts.phones[0]
   const brandLabels = BRAND_LABELS[locale]
@@ -37,7 +36,7 @@ export default function Header({ locale, routeKey }: HeaderProps) {
               </a>
             ) : null}
 
-            <LocaleSwitcher currentLocale={locale} routeKey={routeKey} />
+            <LocaleSwitcher currentLocale={locale} />
           </div>
         </div>
       </Container>
