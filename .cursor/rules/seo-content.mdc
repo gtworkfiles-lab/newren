@@ -1,0 +1,83 @@
+---
+description: SEO and content behavior rules for page generation and implementation
+alwaysApply: true
+---
+
+# SEO / Content Rules
+
+## SEO model
+Every page must support:
+- clear search intent
+- trust
+- conversion
+- internal linking
+- locale-aware metadata
+
+## Metadata
+Metadata must support:
+- title
+- description
+- canonical
+- hreflang alternates
+- og
+- twitter if used
+
+Do not leave generic metadata placeholders on production pages.
+
+## Page roles
+Conversion pages:
+- home
+- alcohol
+- drugs
+- gambling
+- family help
+- rehabilitation
+- contacts
+
+Trust pages:
+- about
+- living conditions
+- reviews
+- faq
+
+Content layer:
+- blog / articles
+
+## Avoid
+- duplicate homepage wording across all pages
+- generic low-value SEO filler
+- aggressive claims
+- medical overpromises
+- page cannibalization between services and rehab/family/faq pages
+
+## Tone
+Approved tone:
+- clear
+- professional
+- supportive
+- non-judgmental
+
+## Brand wording
+Use brand naturally as:
+- Rehabilitation center Renaissance
+
+## Service page logic
+Service pages are structured around:
+- problem
+- treatment
+- recovery
+- family support
+- trust
+- FAQ
+- CTA
+- related links
+
+## FAQ logic
+FAQ should be:
+- data-driven
+- grouped when needed
+- reusable across page types
+
+## Content generation rule
+If approved copy exists, preserve it.
+Do not simplify strong locked wording without reason.

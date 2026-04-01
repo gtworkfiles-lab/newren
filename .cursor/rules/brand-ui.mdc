@@ -1,0 +1,77 @@
+---
+description: Locked brand and UI rules for Renaissance project
+alwaysApply: true
+---
+
+# Brand / UI Rules
+
+## Emotional mode
+The visual language must feel:
+- calm
+- safe
+- structured
+- human
+- professional
+- non-judgmental
+
+Avoid:
+- aggressive marketing tone
+- cold sterile medical look
+- visual pressure
+- decorative chaos
+- overly dark interface
+- flashy CTA styling
+
+## Typography
+Locked typography pair:
+- Headings: Manrope
+- Body / UI: Inter
+
+Do not replace with random alternatives.
+
+## Color hierarchy
+Locked hierarchy:
+- green-first
+- blue-second
+- light warm / soft neutral backgrounds
+- warning color only functional
+
+## Brand colors
+- Primary Green: #2E8B3C
+- Deep Green: #1F5E2A
+- Support Blue: #3F6EA8
+- Deep Blue: #2F496B
+- Warm Background: #F8F7F3
+- Soft Neutral: #F2F6F4
+- Text Primary: #24312B
+- Text Secondary: #5F6E67
+- Border: #D8E2DC
+- Hope Accent: #D7A85B
+- Warning Accent: #B5544F
+
+## Warning rule
+#B5544F may be used only for:
+- error
+- warning
+- urgency micro-accent
+
+Do not use it for:
+- primary CTA
+- hero emphasis
+- large backgrounds
+- dominant visual sections
+
+## UI hierarchy
+- Primary CTA = green
+- Secondary/info actions = blue
+- Footer = deep green
+- Forms = clean, low-noise, trust-focused
+- Cards = soft, restrained, non-glossy
+- Sticky contact bar = unified, simple, not multicolor chaos
+
+## Print rule
+Use one brand system for:
+- web
+- print
+
+Allow print-safe adaptation, but do not invent a separate brand system.

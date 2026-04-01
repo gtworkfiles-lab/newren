@@ -1,0 +1,55 @@
+---
+description: Implementation workflow rules for Cursor execution
+alwaysApply: true
+---
+
+# Implementation Rules
+
+## Build order
+Follow this order unless explicitly told otherwise:
+1. route system
+2. slug map
+3. layouts
+4. navigation
+5. data contracts
+6. templates
+7. core pages
+8. metadata
+9. contact system
+10. blog system
+
+## Execution style
+- Prefer reusable systems over page-by-page hacks.
+- Keep components composable.
+- Keep content in data/content files where appropriate.
+- Avoid hardcoded repeated strings in shared templates.
+
+## Do not change without approval
+- locale strategy
+- slug strategy
+- navigation scope
+- compact architecture
+- brand hierarchy
+- CTA priority
+- no separate team page
+- blog phase 1 navigation rule
+
+## Contact priority
+Primary conversion channels:
+1. Call
+2. Viber
+3. WhatsApp
+4. Telegram
+
+Forms are secondary conversion layer.
+
+## Approved copy
+If a page has approved headings, subtitles, CTA or trust phrases, use them first.
+Only generate missing copy where approved copy is absent.
+
+## Output preference
+When implementing:
+- be explicit
+- keep files clean
+- avoid unnecessary abstraction
+- prefer production-ready structure

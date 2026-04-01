@@ -1,0 +1,92 @@
+---
+description: Locked architecture rules for reabilitacia.cv.ua production build
+alwaysApply: true
+---
+
+# Architecture Rules
+
+## Core model
+- This project follows a compact site architecture.
+- Do not expand the page map or navigation without explicit approval.
+- Keep architecture focused, trust-oriented, SEO-ready, conversion-oriented.
+
+## Locale strategy
+- Final locale model is locked:
+  - /uk
+  - /ru
+  - /en
+- Legacy route:
+  - /ua/* -> 301 -> /uk/*
+- Do not introduce /ua as active canonical locale.
+
+## Slug strategy
+- Translated slugs per locale are locked.
+- Do not replace them with one shared slug pattern across locales.
+- Slug map must be centralized and reusable.
+
+## Core pages
+- Home
+- Alcohol treatment
+- Drug treatment
+- Gambling treatment
+- Rehabilitation
+- Family help
+- About center
+- Reviews
+- FAQ
+- Living conditions
+- Contacts
+- Blog
+- Legal pages
+
+## Navigation
+Main navigation must remain compact:
+- Home
+- Services / Treatment container
+- Family Help
+- About Center
+- Reviews
+- FAQ
+- Contacts
+
+Do not place these as separate first-level main nav items:
+- alcohol
+- drugs
+- gambling
+- rehabilitation
+- living conditions
+- legal pages
+- blog in phase 1
+
+## Team page
+- No separate team page.
+- Team is integrated into About Center.
+
+## Blog
+- Blog exists in route structure.
+- Blog stays hidden from main navigation in phase 1.
+
+## Data architecture
+These systems must be data-driven:
+- contacts
+- FAQ
+- reviews
+- gallery
+- services content
+
+Do not hardcode reusable content inside shared components.
+
+## Trust structure
+- Living conditions is a trust page, not a legal page.
+- Reviews, FAQ, About Center, Living Conditions, Contacts are trust/conversion support nodes.
+
+## Internal linking
+No page should become a dead end.
+Use linking between:
+- services
+- family help
+- reviews
+- FAQ
+- contacts
+- about
+- rehabilitation
