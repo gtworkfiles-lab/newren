@@ -1,4 +1,4 @@
-import { findRouteKeyBySlug } from '@/lib/routes'
+import { getAllRouteDefinitions } from '@/lib/slug-map'
 import type { Locale, RouteKey } from '@/lib/routes'
 
 export function resolveCurrentRouteKey(
@@ -14,7 +14,12 @@ export function resolveCurrentRouteKey(
 
   const [slug] = localizedSegments
 
-  const routeKey = findRouteKeyBySlug(locale, slug)
+  const routeKey = getAllRouteDefinitions().find((routeDefinition) => {
+    return (
+      routeDefinition.slugs[locale] === slug ||
+      Object.values(routeDefinition.slugs).includes(slug)
+    )
+  })?.key
 
   return routeKey ?? 'home'
 }

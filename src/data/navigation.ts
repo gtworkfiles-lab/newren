@@ -10,13 +10,19 @@ export type NavigationItem = {
 }
 
 export const MAIN_NAV_KEYS: RouteKey[] = [
+  'home',
+  'family',
+  'about',
+  'reviews',
+  'faq',
+  'contacts',
+]
+
+export const SERVICES_NAV_KEYS: RouteKey[] = [
   'alcohol',
   'drugs',
   'gambling',
   'rehab',
-  'family',
-  'about',
-  'contacts',
 ]
 
 export const FOOTER_HELP_KEYS: RouteKey[] = [
@@ -129,6 +135,12 @@ export const BRAND_LABELS: Record<Locale, { name: string; text: string }> = {
   },
 }
 
+export const SERVICES_GROUP_LABEL: NavigationLabelMap = {
+  uk: 'Лікування',
+  ru: 'Лечение',
+  en: 'Treatment',
+}
+
 export function buildNavigationItem(key: RouteKey): NavigationItem {
   return {
     key,
@@ -146,6 +158,8 @@ export function buildNavigationItems(keys: RouteKey[]): NavigationItem[] {
 }
 
 export const MAIN_NAV_ITEMS = buildNavigationItems(MAIN_NAV_KEYS)
+
+export const SERVICES_NAV_ITEMS = buildNavigationItems(SERVICES_NAV_KEYS)
 
 export const FOOTER_HELP_ITEMS = buildNavigationItems(FOOTER_HELP_KEYS)
 

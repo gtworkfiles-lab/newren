@@ -16,8 +16,7 @@ export default function LocaleSwitcher({
   routeKey,
 }: LocaleSwitcherProps) {
   const pathname = usePathname()
-  const currentRouteKey =
-    routeKey ?? resolveCurrentRouteKey(currentLocale, pathname)
+  const currentRouteKey = routeKey ?? resolveCurrentRouteKey(currentLocale, pathname)
 
   return (
     <div className="locale-switcher" aria-label="Language switcher">
