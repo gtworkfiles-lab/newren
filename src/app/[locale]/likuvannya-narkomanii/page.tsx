@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import ServicePageTemplate from '@/components/templates/ServicePageTemplate'
-import { DRUGS_SERVICE_CONTENT } from '@/data/services'
+import { getServiceContent } from '@/data/services'
 import { buildPageMetadata } from '@/seo/metadata'
 import { isValidLocale, type Locale } from '@/lib/routes'
 
@@ -50,7 +50,11 @@ export default async function DrugsPage({ params }: DrugsPageProps) {
   }
 
   const currentLocale: Locale = locale
-  const content = DRUGS_SERVICE_CONTENT[currentLocale]
+  const content = getServiceContent('drugs', currentLocale)
+
+  if (!content) {
+    notFound()
+  }
 
   return <ServicePageTemplate locale={currentLocale} routeKey="drugs" {...content} />
 }

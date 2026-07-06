@@ -1,5 +1,7 @@
 import type { Locale } from '@/lib/routes'
 
+export type ServiceRouteKey = 'alcohol' | 'drugs' | 'gambling'
+
 export type ServiceContent = {
   heroTitle: string
   heroSubtitle: string
@@ -637,4 +639,14 @@ export const GAMBLING_SERVICE_CONTENT: Record<Locale, ServiceContent> = {
     finalCtaTitle: 'TODO',
     finalCtaText: 'TODO',
   },
+}
+
+export function getServiceContent(routeKey: ServiceRouteKey, locale: Locale): ServiceContent | null {
+  const contentByLocale = {
+    alcohol: ALCOHOL_SERVICE_CONTENT,
+    drugs: DRUGS_SERVICE_CONTENT,
+    gambling: GAMBLING_SERVICE_CONTENT,
+  }[routeKey]
+
+  return contentByLocale?.[locale] ?? null
 }

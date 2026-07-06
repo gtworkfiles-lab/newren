@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import ServicePageTemplate from '@/components/templates/ServicePageTemplate'
-import { GAMBLING_SERVICE_CONTENT } from '@/data/services'
+import { getServiceContent } from '@/data/services'
 import { buildPageMetadata } from '@/seo/metadata'
 import { isValidLocale, type Locale } from '@/lib/routes'
 
@@ -50,7 +50,11 @@ export default async function GamblingPage({ params }: GamblingPageProps) {
   }
 
   const currentLocale: Locale = locale
-  const content = GAMBLING_SERVICE_CONTENT[currentLocale]
+  const content = getServiceContent('gambling', currentLocale)
+
+  if (!content) {
+    notFound()
+  }
 
   return <ServicePageTemplate locale={currentLocale} routeKey="gambling" {...content} />
 }
