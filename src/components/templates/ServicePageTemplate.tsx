@@ -7,6 +7,7 @@ import TextBlockSection from '@/components/sections/shared/TextBlockSection'
 import FaqSection from '@/components/sections/shared/FaqSection'
 import FinalCtaSection from '@/components/sections/shared/FinalCtaSection'
 import InternalLinksSection from '@/components/sections/shared/InternalLinksSection'
+import ServicePageSchema from '@/components/seo/ServicePageSchema'
 
 type ServicePageTemplateProps = {
   locale: Locale
@@ -108,6 +109,13 @@ export default function ServicePageTemplate({
 
   return (
     <>
+      <ServicePageSchema
+        locale={locale}
+        routeKey={routeKey}
+        faqTitle={faqTitle}
+        faqItems={faqItems}
+        hasFaqSection={hasFaqSection}
+      />
       <Breadcrumbs locale={locale} routeKey={routeKey} />
 
       {hasHero ? (

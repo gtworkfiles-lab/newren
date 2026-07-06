@@ -11,7 +11,12 @@ type BuildPageMetadataParams = {
   noIndex?: boolean
 }
 
-const SITE_URL = 'https://reabilitacia.cv.ua'
+export const SITE_URL = 'https://reabilitacia.cv.ua'
+
+export function buildCanonicalUrl(locale: Locale, routeKey: RouteKey): string {
+  const path = getLocalizedPath(locale, routeKey)
+  return `${SITE_URL}${path}`
+}
 
 export function buildPageMetadata({
   locale,
@@ -20,15 +25,15 @@ export function buildPageMetadata({
   description,
   noIndex = false,
 }: BuildPageMetadataParams): Metadata {
-  const path = getLocalizedPath(locale, routeKey)
   const alternatesMap = getLocaleAlternates(routeKey)
+  const canonicalUrl = buildCanonicalUrl(locale, routeKey)
 
   return {
     metadataBase: new URL(SITE_URL),
     title,
     description,
     alternates: {
-      canonical: path,
+      canonical: canonicalUrl,
       languages: {
         uk: alternatesMap.uk,
         ru: alternatesMap.ru,
@@ -38,7 +43,7 @@ export function buildPageMetadata({
     openGraph: {
       title,
       description,
-      url: `${SITE_URL}${path}`,
+      url: canonicalUrl,
       siteName: SITE_CONFIG.brandName,
       locale,
       type: 'website',
